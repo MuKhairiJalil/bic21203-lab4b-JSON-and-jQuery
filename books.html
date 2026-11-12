@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books Data</title>
+</head>
+<body>
+    <h2>Book Information</h2>
+    <div id="output"></div>
+
+    <script>
+        
+       fetch('books.json')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const books = data.books;
+                    const outputDiv = document.getElementById('output');
+
+                
+                const title1 = books[0].title;
+                const author2 = books[1].author;
+                const groupedGenres1 = books[0].title + " — " + books[0].genres.join(", ");
+                const groupedGenres2 = books[1].title + " — " + books[1].genres.join(", ");
+
+                
+                const exactOutput = `${title1}; ${author2}; ${groupedGenres1}; ${groupedGenres2}.`;
+
+                
+                const p = document.createElement('p');
+                p.textContent = exactOutput;
+                outputDiv.appendChild(p);
+            })
+            .catch(error => {
+                
+                const outputDiv = document.getElementById('output');
+                outputDiv.textContent = "Error loading book data: " + error.message;
+            });
+    </script>
+</body>
+</html>
