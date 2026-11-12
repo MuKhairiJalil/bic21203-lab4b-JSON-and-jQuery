@@ -17,7 +17,7 @@ This repository contains the completed tasks for Lab 4b, focusing on JSON data s
 To run this project locally, you must bypass browser CORS restrictions. CORS prevents JavaScript running on one domain from reading data or API responses from a different origin unless the receiving server explicitly permits it.
 1. Open this repository folder in **Visual Studio Code**.
 2. Install the **Live Server** extension.
-3. Right-click on `books.html` (or `jquery-dom.html`) and select **"Open with Live Server"**.
+3. Right-click on `books.html` (or `jquery-dom.html`) and select **"Open with Live Server"**. I open it using modern browser like Google Chrome.
 4. The page will open in your browser via a local server such as ( `http://127.0.0.1:5500/...`), ensuring the `fetch()` command executes successfully. Do not open the files directly using the `file://` protocol.
 
 ## Screenshots
@@ -28,7 +28,7 @@ To run this project locally, you must bypass browser CORS restrictions. CORS pre
 
 ### Question 2: books.html Output
 
-![books.html Screenshot](lab4b_q2.png)
+![books.html Screenshot](lab4b_q2alt.png)
 
 ### Question 3: jquery-dom.html Output
 
